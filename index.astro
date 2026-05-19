@@ -1,0 +1,224 @@
+---
+import "../styles/global.css";
+
+const reminderTemplates = [
+  "Friendly Nudge",
+  "Gentle Overdue Reminder",
+  "Clear Payment Check-In",
+  "Firm But Polite Follow-Up",
+  "Final Courtesy Notice"
+];
+
+const earlyAccessBenefits = [
+  "Early access to Dulo",
+  "Help shape the reminder workflow",
+  "Get launch updates by email"
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Dulo helps freelancers and small businesses follow up on overdue invoices with clear, polite payment reminders."
+    />
+    <title>Dulo | Get paid without the awkward chase</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Dulo home">
+        <span class="brand-mark">D</span>
+        <span>Dulo</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#how">How it works</a>
+        <a href="#early-access">Early access</a>
+      </nav>
+      <a class="header-cta" href="https://tally.so/r/vGJ6yg">Join the waitlist</a>
+    </header>
+
+    <main id="top">
+      <section class="hero section-shell">
+        <div class="hero-copy">
+          <h1>Get paid without the awkward chase.</h1>
+          <p class="hero-lede">
+            Dulo helps freelancers and small businesses follow up on overdue invoices with clear, polite payment reminders, so you can stay consistent without damaging client relationships. Join the waitlist to get early access.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="https://tally.so/r/vGJ6yg">Join the waitlist</a>
+            <a class="button button-secondary" href="#how">See how it works</a>
+          </div>
+          <dl class="proof-strip" aria-label="Dulo key features">
+            <div>
+              <dt>Early</dt>
+              <dd>Access coming</dd>
+            </div>
+            <div>
+              <dt>5</dt>
+              <dd>Reminder templates</dd>
+            </div>
+            <div>
+              <dt>0</dt>
+              <dd>Auto-send risk</dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="workflow-panel" aria-label="Invoice follow-up workflow preview">
+          <div class="panel-topline">
+            <span>Invoice follow-up</span>
+            <span class="status-dot">Overdue</span>
+          </div>
+          <div class="invoice-card">
+            <div>
+              <span class="label">Client</span>
+              <strong>Northline Studio</strong>
+            </div>
+            <div>
+              <span class="label">Amount</span>
+              <strong>£1,240</strong>
+            </div>
+            <div>
+              <span class="label">Due</span>
+              <strong>8 days ago</strong>
+            </div>
+          </div>
+          <div class="tone-row" aria-label="Tone options">
+            <button class="tone active" type="button" data-tone="friendly" aria-pressed="true">Friendly</button>
+            <button class="tone" type="button" data-tone="neutral" aria-pressed="false">Neutral</button>
+            <button class="tone" type="button" data-tone="firm" aria-pressed="false">Firm</button>
+          </div>
+          <div class="message-preview">
+            <span class="label">Approved reminder</span>
+            <p data-reminder-message>
+              Hi Sam, hope you're well. Just checking in on invoice #1042, which became due last week. Could you confirm when payment is scheduled?
+            </p>
+          </div>
+          <div class="next-step">
+            <span>Next step tracked</span>
+            <strong>Follow up Friday if unpaid</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="problem section-shell">
+        <div>
+          <h2>Overdue invoices are easy to avoid. That is the problem.</h2>
+        </div>
+        <div class="problem-copy">
+          <p>
+            Most freelancers and small teams do not need collections software. They need a practical way to ask clearly, follow up consistently, and keep the relationship intact.
+          </p>
+          <p>
+            Dulo turns the uncomfortable part into a simple working system: who owes what, what to say next, and when to send it.
+          </p>
+        </div>
+      </section>
+
+      <section class="steps section-shell" id="how">
+        <div class="section-heading">
+          <h2>A simple workflow, not another finance platform.</h2>
+          <p>Share invoice details. Get a tracker, tone-matched reminders, and a clear weekly process.</p>
+        </div>
+        <div class="step-list">
+          <article>
+            <span>01</span>
+            <h3>Add the invoice details</h3>
+            <p>Client name, amount, due date, invoice number, and any previous messages.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Choose the tone</h3>
+            <p>Friendly nudge, neutral check-in, firm reminder, or a voice that matches your business.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Approve the reminder</h3>
+            <p>Dulo drafts the message. You review, edit, and send. Nothing goes out automatically.</p>
+          </article>
+          <article>
+            <span>04</span>
+            <h3>Track the next step</h3>
+            <p>Keep overdue invoices visible so follow-ups happen on time instead of from memory.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="pricing section-shell" id="early-access">
+        <div class="section-heading">
+          <h2>Join early access</h2>
+          <p>We're inviting freelancers and small businesses who regularly chase overdue invoices. Join the waitlist and tell us how you handle late payments today.</p>
+        </div>
+        <div class="early-access-benefits">
+          <ul>
+            {earlyAccessBenefits.map((benefit) => <li>{benefit}</li>)}
+          </ul>
+          <a class="button button-primary" href="https://tally.so/r/vGJ6yg">Join the waitlist</a>
+        </div>
+      </section>
+
+      <section class="templates section-shell">
+        <div class="template-card">
+          <div>
+            <h2>Five reminders for real client situations.</h2>
+            <p>Each template can be adjusted to match your relationship with the client.</p>
+          </div>
+          <ol>
+            {reminderTemplates.map((template) => <li>{template}</li>)}
+          </ol>
+        </div>
+      </section>
+
+      <section class="outreach section-shell" id="who">
+        <div class="section-heading align-left">
+          <h2>Who Dulo is for</h2>
+          <p>Freelancers and small teams who want to chase invoices without awkwardness or guesswork.</p>
+        </div>
+        <div class="script-box">
+          <p>You send invoices regularly but follow-ups feel inconsistent or uncomfortable.</p>
+          <p>You want payment reminders that stay polite, even after multiple nudges.</p>
+          <p>You need a system that shows what's overdue and what to do next, without becoming a full-blown finance platform.</p>
+          <p>If that sounds familiar, join the waitlist. We're building this for you.</p>
+        </div>
+      </section>
+
+      <section class="final-cta section-shell">
+        <div>
+          <h2>Join the waitlist and help shape Dulo.</h2>
+          <p>Tell us about your invoice follow-up process and get early access when we launch.</p>
+        </div>
+        <a class="button button-primary" href="https://tally.so/r/vGJ6yg">Join the waitlist</a>
+      </section>
+    </main>
+    <script>
+      const toneMessages = {
+        friendly:
+          "Hi Sam, hope you're well. Just checking in on invoice #1042, which became due last week. Could you confirm when payment is scheduled?",
+        neutral:
+          "Hi Sam, invoice #1042 is now 8 days overdue. Please confirm the expected payment date when you have a moment.",
+        firm:
+          "Hi Sam, invoice #1042 remains overdue. Please arrange payment or confirm a payment date by Friday."
+      };
+
+      const toneButtons = document.querySelectorAll("[data-tone]");
+      const reminderMessage = document.querySelector("[data-reminder-message]");
+
+      toneButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const selectedTone = button.getAttribute("data-tone");
+          if (!selectedTone || !reminderMessage) return;
+
+          toneButtons.forEach((item) => {
+            item.classList.toggle("active", item === button);
+            item.setAttribute("aria-pressed", String(item === button));
+          });
+
+          reminderMessage.textContent = toneMessages[selectedTone];
+        });
+      });
+    </script>
+  </body>
+</html>
